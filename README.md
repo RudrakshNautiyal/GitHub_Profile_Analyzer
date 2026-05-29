@@ -6,7 +6,7 @@ A backend REST API service built with Node.js, Express, and MySQL that analyzes 
 
 ## Live API
 
-Base URL: `https://YOUR_DEPLOYED_URL.railway.app`
+Base URL: `https://githubprofileanalyzer-production.up.railway.app`
 
 ---
 
