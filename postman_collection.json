@@ -1,0 +1,71 @@
+{
+  "info": {
+    "name": "GitHub Profile Analyzer API",
+    "description": "API collection for GitHub Profile Analyzer",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/",
+          "host": ["{{base_url}}"],
+          "path": ["/"]
+        }
+      }
+    },
+    {
+      "name": "Analyze GitHub Profile",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "{{base_url}}/api/analyze/:username",
+          "host": ["{{base_url}}"],
+          "path": ["api", "analyze", ":username"],
+          "variable": [
+            {
+              "key": "username",
+              "value": "torvalds"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Profiles",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/profiles",
+          "host": ["{{base_url}}"],
+          "path": ["api", "profiles"]
+        }
+      }
+    },
+    {
+      "name": "Get Single Profile",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/profiles/:username",
+          "host": ["{{base_url}}"],
+          "path": ["api", "profiles", ":username"],
+          "variable": [
+            {
+              "key": "username",
+              "value": "torvalds"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000"
+    }
+  ]
+}
